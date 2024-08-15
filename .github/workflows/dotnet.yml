@@ -31,7 +31,7 @@ jobs:
           release_name="D2LT-$tag-${{ matrix.target }}"
 
           # Build everything
-          dotnet publish DestinyLoadoutTool.csproj --framework net8.0-windows --runtime "${{ matrix.target }}" -c Release -o "$release_name" -p:PublishReadyToRun=true -p:PublishSingleFile=true --self-contained true 
+          dotnet publish DestinyLoadoutTool.csproj --framework net8.0-windows7.0 --runtime "${{ matrix.target }}" -c Release -o "$release_name" -p:PublishReadyToRun=true -p:PublishSingleFile=true --self-contained true 
 
           # Pack files
           if [ "${{ matrix.target }}" == "win-x64" ]; then
