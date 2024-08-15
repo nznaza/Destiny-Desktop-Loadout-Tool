@@ -1,0 +1,83 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net8.0-windows7.0</TargetFramework>
+    <Nullable>enable</Nullable>
+    <UseWPF>true</UseWPF>
+    <StartupObject>DestinyLoadoutTool.App</StartupObject>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="Resources\done.mp3" />
+    <None Remove="Resources\done1.mp3" />
+    <None Remove="Resources\done\1f71febf.mp3" />
+    <None Remove="Resources\done\4c7a7c34.mp3" />
+    <None Remove="Resources\done\9925de90.mp3" />
+    <None Remove="Resources\done\c7014363.mp3" />
+    <None Remove="Resources\done\d010b66d.mp3" />
+    <None Remove="Resources\done\done.mp3" />
+    <None Remove="Resources\done\done1.mp3" />
+    <None Remove="Resources\done\done2.mp3" />
+    <None Remove="Resources\error\c321274d.mp3" />
+    <None Remove="Resources\error\c6bc7cc0.mp3" />
+    <None Remove="Resources\error\oops.mp3" />
+    <None Remove="Resources\icons8-checkmark.svg" />
+    <None Remove="Resources\play.svg" />
+    <None Remove="Resources\ready\7361625e.mp3" />
+    <None Remove="Resources\ready\86a7dc1e.mp3" />
+    <None Remove="Resources\ready\ad16de61.mp3" />
+    <None Remove="Resources\stop.svg" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="DotNetBungieAPI" Version="2.14.1" />
+    <PackageReference Include="DotNetBungieAPI.DefinitionProvider.Sqlite" Version="1.7.1" />
+    <PackageReference Include="Microsoft.Extensions.Logging.Console" Version="8.0.0" />
+    <PackageReference Include="NAudio" Version="2.2.1" />
+    <PackageReference Include="Newtonsoft.Json" Version="13.0.3" />
+    <PackageReference Include="PortableSettingsProvider" Version="0.2.5" />
+    <PackageReference Include="Serilog.Extensions.Hosting" Version="8.0.0" />
+    <PackageReference Include="Serilog.Sinks.Console" Version="6.0.0" />
+    <PackageReference Include="Serilog.Sinks.Debug" Version="3.0.0" />
+    <PackageReference Include="Serilog.Sinks.EventLog" Version="4.0.0" />
+    <PackageReference Include="Serilog.Sinks.File" Version="6.0.0" />
+    <PackageReference Include="SharpVectors" Version="1.8.4.1" />
+    <PackageReference Include="System.Text.Json" Version="8.0.4" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="Resources\done\1f71febf.mp3" />
+    <Resource Include="Resources\done\4c7a7c34.mp3" />
+    <Resource Include="Resources\done\9925de90.mp3" />
+    <Resource Include="Resources\done\c7014363.mp3" />
+    <Resource Include="Resources\done\d010b66d.mp3" />
+    <Resource Include="Resources\done\done.mp3" />
+    <Resource Include="Resources\done\done1.mp3" />
+    <Resource Include="Resources\done\done2.mp3" />
+    <Resource Include="Resources\error\c321274d.mp3" />
+    <Resource Include="Resources\error\c6bc7cc0.mp3" />
+    <Resource Include="Resources\error\oops.mp3" />
+    <Resource Include="Resources\play.svg" />
+    <Resource Include="Resources\ready\7361625e.mp3" />
+    <Resource Include="Resources\ready\ad16de61.mp3" />
+    <Resource Include="Resources\stop.svg" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Update="Settings.Designer.cs">
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+    </Compile>
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Update="Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+
+</Project>
